@@ -7,5 +7,12 @@
 <a href="https://xuchen.youtuc.cn/2017/02/13/Centos7%E4%BC%98%E5%8C%96/#2-%E5%AE%89%E8%A3%85%E5%A2%9E%E5%BC%BA">安装使用教程</a>
 
 
-
+## es&etcd等数据外挂服务
+参考docker-compose 文件中mysql外挂部分
+```$xslt
+volumes:
+      - ./conf/mysql/my.cnf:/etc/mysql/my.cnf:ro
+      - ./data/mysql/:/var/lib/mysql/:rw
+      - ./log/mysql/:/var/log/mysql/:rw
+```
 
